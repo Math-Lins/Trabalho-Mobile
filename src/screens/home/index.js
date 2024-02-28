@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Image, Pressable } from 'react-native';
+import { StyleSheet, View, Text, Image, Pressable, Linking } from 'react-native';
 
 import Apresentation from '../../assets/apresentation.png'
 
@@ -8,7 +8,7 @@ export const Home = () => {
             <Text style={styles.h1}>Tagpet</Text>
             <Image style={styles.Apresentation} source={Apresentation} />
             <Text style={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc venenatis ex orci, vel placerat justo euismod id. Maecenas dapibus arcu in consequat consequat. Suspendisse potenti. Etiam eget nisi risus. Nullam.</Text>
-            <Pressable style={styles.btn} onPress={() => {console.log('clicado')}}>
+            <Pressable style={styles.btn} onPress={() => console.log('btn clicado')}>
                 <Text style={styles.txt_btn}>Next</Text>
             </Pressable>
         </View>
@@ -33,11 +33,11 @@ const styles = StyleSheet.create({
     Apresentation: {
         width: 400,
         height: 400,
-        marginVertical: 20,
+        marginVertical: 10,
     },
     p: {
         paddingVertical: 20,
-        paddingHorizontal: 30,
+        paddingHorizontal: 20,
         textAlign: 'justify',
         color: '#888',
         fontSize: 15
