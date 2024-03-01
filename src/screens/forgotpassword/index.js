@@ -4,14 +4,15 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  Pressable,
   Alert,
   Button,
 } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export const ForgotPassword = () => {
   const [email, setEmail] = useState("");
-
+  
   const handleSubmit = () => {
     if (!email) {
       Alert.alert("Por favor, insira seu e-mail");

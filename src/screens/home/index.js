@@ -1,14 +1,16 @@
-import { StyleSheet, View, Text, Image, Pressable, Linking } from 'react-native';
-
+import * as React from 'react';
+import { StyleSheet, View, Text, Image, Pressable } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Apresentation from '../../assets/apresentation.png'
 
-export const Home = () => {
+export const Home = ({ navigation }) => {
     return <View style={StyleSheet.container}>
         <View style={styles.header}>
             <Text style={styles.h1}>Tagpet</Text>
             <Image style={styles.Apresentation} source={Apresentation} />
             <Text style={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc venenatis ex orci, vel placerat justo euismod id. Maecenas dapibus arcu in consequat consequat. Suspendisse potenti. Etiam eget nisi risus. Nullam.</Text>
-            <Pressable style={styles.btn} onPress={() => console.log('btn clicado')}>
+            <Pressable style={styles.btn} onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.txt_btn}>Next</Text>
             </Pressable>
         </View>

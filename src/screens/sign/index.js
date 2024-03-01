@@ -1,7 +1,9 @@
-import React from "react";
+import * as React from 'react';
 import { View, StyleSheet, Text, TextInput, Pressable } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export const Login = () => {
+export const Login = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
@@ -21,8 +23,8 @@ export const Login = () => {
         <Text style={styles.txtBtn}>sign in</Text>
       </Pressable>
       <View style={styles.subcontainer}>
-        <Pressable style={styles.subbtn}>
-          <Text style={styles.subtxtBtn}>Esqueci minha senha</Text>
+        <Pressable style={styles.subbtn} onPress={() => navigation.navigate('ForgotPassword')}>
+          <Text style={styles.subtxtBtn}>Forgot password</Text>
         </Pressable>
         <Pressable style={styles.subbtn} >
           <Text style={styles.subtxtBtn}>Register</Text>
